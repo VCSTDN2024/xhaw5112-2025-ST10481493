@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".MainActivity3">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <!-- ================= HEADER ================= -->
+
+    <!-- Top App Bar as LinearLayout -->
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/lightblue"
+        android:gravity="center_vertical"
+        android:elevation="4dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/rounded_bg_light"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/img_logo" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Course Fees"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_nav"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/icon_drawermenu"
+            android:text=""
+            app:backgroundTint="@color/white"
+            style="@style/Widget.Material3.Button.IconButton" />
+    </LinearLayout>
+
+    <!-- ================= SETS SECTION ================= -->
+
+    <!-- ========== SET 1 ========== -->
+
+
+    <ImageView
+        android:id="@+id/img_set"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_set"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="First Aid"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set"
+        app:layout_constraintStart_toStartOf="@+id/img_set"
+        app:layout_constraintEnd_toEndOf="@+id/img_set"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageView
+        android:id="@+id/imag_innerset"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set"
+        app:layout_constraintStart_toStartOf="@+id/img_set"
+        app:layout_constraintEnd_toEndOf="@+id/img_set"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_fa" />
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:cornerRadius="12dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_set"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set"
+        app:layout_constraintStart_toStartOf="@+id/img_set"
+        app:layout_constraintEnd_toEndOf="@+id/img_set"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <!-- ========== SET 2 ========== -->
+    <ImageView
+        android:id="@+id/img_set2"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_set2"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Sewing"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set2"
+        app:layout_constraintStart_toStartOf="@+id/img_set2"
+        app:layout_constraintEnd_toEndOf="@+id/img_set2"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageView
+        android:id="@+id/imag_innerset2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set2"
+        app:layout_constraintStart_toStartOf="@+id/img_set2"
+        app:layout_constraintEnd_toEndOf="@+id/img_set2"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_s" />
+
+    <Button
+        android:id="@+id/btn_set2"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:cornerRadius="12dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_set2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set2"
+        app:layout_constraintStart_toStartOf="@+id/img_set2"
+        app:layout_constraintEnd_toEndOf="@+id/img_set2"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <!-- ========== SET 3 ========== -->
+
+    <ImageView
+        android:id="@+id/img_set3"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_set3"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Landscaping"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set3"
+        app:layout_constraintStart_toStartOf="@+id/img_set3"
+        app:layout_constraintEnd_toEndOf="@+id/img_set3"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageView
+        android:id="@+id/imag_innerset3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set3"
+        app:layout_constraintStart_toStartOf="@+id/img_set3"
+        app:layout_constraintEnd_toEndOf="@+id/img_set3"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_l" />
+
+    <Button
+        android:id="@+id/btn_set3"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:cornerRadius="12dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_set3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set3"
+        app:layout_constraintStart_toStartOf="@+id/img_set3"
+        app:layout_constraintEnd_toEndOf="@+id/img_set3"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <!-- ========== SET 4 ========== -->
+
+    <ImageView
+        android:id="@+id/img_set4"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_set4"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Life Skills"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set4"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set4"
+        app:layout_constraintStart_toStartOf="@+id/img_set4"
+        app:layout_constraintEnd_toEndOf="@+id/img_set4"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <ImageView
+        android:id="@+id/imag_innerset4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_set4"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set4"
+        app:layout_constraintStart_toStartOf="@+id/img_set4"
+        app:layout_constraintEnd_toEndOf="@+id/img_set4"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_ls" />
+
+    <Button
+        android:id="@+id/btn_set4"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:cornerRadius="12dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_set4"
+        app:layout_constraintBottom_toBottomOf="@+id/img_set4"
+        app:layout_constraintStart_toStartOf="@+id/img_set4"
+        app:layout_constraintEnd_toEndOf="@+id/img_set4"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <!-- Navigation between sets -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        tools:ignore="MissingConstraints">
+
+        <!-- Next Set Button -->
+    </LinearLayout>
+
+
+    <!-- ================= PACKS SECTION ================= -->
+
+    <!-- ========== PACK 1 ========== -->
+    <ImageView
+        android:id="@+id/img_pack1"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_pack1"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Child Minding"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/img_pack1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack1"
+        app:layout_constraintStart_toStartOf="@+id/img_pack1"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack1"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <ImageView
+        android:id="@+id/img_innerpack1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_pack1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack1"
+        app:layout_constraintStart_toStartOf="@+id/img_pack1"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack1"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_cm" />
+
+    <Button
+        android:id="@+id/btn_pack1"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:cornerRadius="12dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_pack1"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack1"
+        app:layout_constraintStart_toStartOf="@+id/img_pack1"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack1"
+        app:layout_constraintVertical_bias="0.863" />
+
+    <!-- ========== PACK 2 ========== -->
+    <ImageView
+        android:id="@+id/img_pack2"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_pack2"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Cooking"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/img_pack2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack2"
+        app:layout_constraintStart_toStartOf="@+id/img_pack2"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack2"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <ImageView
+        android:id="@+id/img_innerpack2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_pack2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack2"
+        app:layout_constraintStart_toStartOf="@+id/img_pack2"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack2"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_c" />
+
+    <Button
+        android:id="@+id/btn_pack2"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_pack2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack2"
+        app:layout_constraintStart_toStartOf="@+id/img_pack2"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack2"
+        app:layout_constraintVertical_bias="0.863" />
+
+
+    <!-- ========== PACK 3 ========== -->
+    <ImageView
+        android:id="@+id/img_pack3"
+        android:layout_width="195dp"
+        android:layout_height="260dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0.859"
+        app:srcCompat="@drawable/img_bar" />
+
+    <TextView
+        android:id="@+id/txt_pack3"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Garden Maintenance"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintTop_toTopOf="@+id/img_pack3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack3"
+        app:layout_constraintStart_toStartOf="@+id/img_pack3"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack3"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <ImageView
+        android:id="@+id/img_innerpack3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="@+id/img_pack3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack3"
+        app:layout_constraintStart_toStartOf="@+id/img_pack3"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack3"
+        app:layout_constraintVertical_bias="0.405"
+        app:srcCompat="@drawable/img_gm" />
+
+    <Button
+        android:id="@+id/btn_pack3"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Learn More"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:cornerRadius="12dp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/img_pack3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pack3"
+        app:layout_constraintStart_toStartOf="@+id/img_pack3"
+        app:layout_constraintEnd_toEndOf="@+id/img_pack3"
+        app:layout_constraintVertical_bias="0.863" />
+
+
+    <!-- Navigation between packs -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_nextpack"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:text=""
+        android:textAllCaps="false"
+        android:textColor="@color/lightblue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/icon_next"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp"
+        app:iconSize="35dp"
+        app:iconTint="@color/lightblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerBar"
+        app:layout_constraintVertical_bias="1.0"
+        app:strokeColor="@color/lightblue"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Courses to Learn and Grow"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Explore our wide range of 6-week and 6-month courses designed to help individuals build valuable skills and gain practical knowledge. Each course is tailored to support your personal and professional growth."
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/lightblue"
+        android:text="6 Month Courses"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="6 Week Courses"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/lightblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.900"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.493"
+        tools:ignore="MissingConstraints">
+
+        <!-- Explore Courses Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_moreinfo"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="More Info -->"
+            android:textAllCaps="false"
+            android:textColor="@color/lightblue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:iconPadding="8dp"
+            app:iconTint="@color/lightblue"
+            app:strokeColor="@color/lightblue"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_nextset"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp"
+        android:text=""
+        android:textAllCaps="false"
+        android:textColor="@color/lightblue"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/icon_next"
+        app:iconGravity="textEnd"
+        app:iconPadding="8dp"
+        app:iconSize="35dp"
+        app:iconTint="@color/lightblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headerBar"
+        app:layout_constraintVertical_bias="0.998"
+        app:strokeColor="@color/lightblue"
+        app:strokeWidth="2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

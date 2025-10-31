@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Empowering The Nation</string>
+    <string name="open_nav">open Empowering The Nation</string>
+    <string name="close_nav">close Empowering The Nation</string>
+
+    <!-- Business Information -->
+    <string name="business_description">Empowering the Nation was established in 2022 and offers courses in Johannesburg. Hundreds of domestic workers and gardeners have been trained on both the six-month long Learnerships and six-week Short Skills Training Programmes to empower themselves and can provide more marketable skills.</string>
+
+    <!-- Six-Month Courses -->
+    <string name="first_aid_title">First Aid</string>
+    <string name="first_aid_fee">R1500</string>
+    <string name="first_aid_purpose">To provide first aid awareness and basic life support</string>
+    <string name="first_aid_content">• Wounds and bleeding\n• Burns and fractures\n• Emergency scene management\n• Cardio-Pulmonary Resuscitation (CPR)\n• Respiratory distress e.g., Choking, blocked airway</string>
+
+    <string name="sewing_title">Sewing</string>
+    <string name="sewing_fee">R1500</string>
+    <string name="sewing_purpose">To provide alterations and new garment tailoring services</string>
+    <string name="sewing_content">• Types of stitches\n• Threading a sewing machine\n• Sewing buttons, zips, hems and seams\n• Alterations\n• Designing and sewing new garments</string>
+
+    <string name="landscaping_title">Landscaping</string>
+    <string name="landscaping_fee">R1500</string>
+    <string name="landscaping_purpose">To provide landscaping services for new and established gardens</string>
+    <string name="landscaping_content">• Indigenous and exotic plants and trees\n• Fixed structures (fountains, statues, benches, tables, built-in braai)\n• Balancing of plants and trees in a garden\n• Aesthetics of plant shapes and colours\n• Garden layout</string>
+
+    <string name="life_skills_title">Life Skills</string>
+    <string name="life_skills_fee">R1500</string>
+    <string name="life_skills_purpose">To provide skills to navigate basic life necessities</string>
+    <string name="life_skills_content">• Opening a bank account\n• Basic labour law (know your rights)\n• Basic reading and writing literacy\n• Basic numeric literacy</string>
+
+    <!-- Six-Week Short Courses -->
+    <string name="child_minding_title">Child Minding</string>
+    <string name="child_minding_fee">R750</string>
+    <string name="child_minding_purpose">To provide basic child and baby care</string>
+    <string name="child_minding_content">• Birth to six-month old baby needs\n• Seven-month to one year old needs\n• Toddler needs\n• Educational toys</string>
+
+    <string name="cooking_title">Cooking</string>
+    <string name="cooking_fee">R750</string>
+    <string name="cooking_purpose">To prepare and cook nutritious family meals</string>
+    <string name="cooking_content">• Nutritional requirements for a healthy body\n• Types of protein, carbohydrates and vegetables\n• Planning meals\n• Tasty and nutritious recipes\n• Preparation and cooking of meals</string>
+
+    <string name="garden_maintenance_title">Garden Maintenance</string>
+    <string name="garden_maintenance_fee">R750</string>
+    <string name="garden_maintenance_purpose">To provide basic knowledge of watering, pruning and planting in a domestic garden</string>
+    <string name="garden_maintenance_content">• Water restrictions and the watering requirements of indigenous and exotic plants\n• Pruning and propagation of plants\n• Planting techniques for different plant types</string>
+
+    <!-- Campus Locations -->
+    <string name="central_campus">Central Campus - Johannesburg CBD</string>
+    <string name="north_campus">North Campus - Sandton</string>
+    <string name="south_campus">South Campus - Soweto</string>
+
+    <!-- Contact Information -->
+    <string name="central_address">123 Commissioner Street, Johannesburg Central, 2001</string>
+    <string name="north_address">456 Rivonia Road, Sandton, 2196</string>
+    <string name="south_address">789 Vilakazi Street, Soweto, 1818</string>
+
+    <string name="central_phone">+27 11 123 4567</string>
+    <string name="north_phone">+27 11 234 5678</string>
+    <string name="south_phone">+27 11 345 6789</string>
+
+    <string name="email_address">info@empoweringthenation.co.za</string>
+
+    <!-- Map Labels -->
+    <string name="view_on_map">View on Map</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="call_campus">Call Campus</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_six_month_courses">Six-Month Courses</string>
+    <string name="nav_short_courses">Short Courses</string>
+    <string name="nav_calculate_fees">Calculate Fees</string>
+    <string name="nav_contact">Contact Details</string>
+
+    <!-- Discount Information -->
+    <string name="discount_info">Discount Structure:\n• One course - No discount\n• Two courses - 5% discount\n• Three courses - 10% discount\n• More than three courses - 15% discount\n\nVAT (15%) will be added to the final amount</string>
+</resources>
