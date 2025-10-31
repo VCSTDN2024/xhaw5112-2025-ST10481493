@@ -1,0 +1,152 @@
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #1a1f2b;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #007b83, #368ba7);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.course {
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+}
+
+.course:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.course img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course:hover img {
+  transform: scale(1.05);
+}
+
+.course-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-content h2 {
+  color: #007b83;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.course-content .duration {
+  display: inline-block;
+  background: linear-gradient(135deg, #007b83, #368ba7);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.course-content p {
+  margin: 0.75rem 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.course-content h3 {
+  color: #007b83;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.course-content ul {
+  margin: 0.5rem 0 1rem 1.25rem;
+  color: #6b7280;
+}
+
+.course-content ul li {
+  margin-bottom: 0.375rem;
+  line-height: 1.5;
+}
+
+.back-btn {
+  display: block;
+  width: fit-content;
+  margin: 3rem auto;
+  background: linear-gradient(135deg, #007b83, #368ba7);
+  color: #fff;
+  padding: 0.875rem 2rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #005f63, #007b83);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .course img {
+    height: 180px;
+  }
+
+  .course-content h2 {
+    font-size: 1.1rem;
+  }
+}

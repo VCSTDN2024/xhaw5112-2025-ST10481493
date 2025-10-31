@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculate Fees - EmpowerWeb</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="Stlye.css">
+  <link rel="icon" type="image/x-icon" href="Media/WhatsApp Image 2025-08-26 at 10.51.26 PM.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Media/WhatsApp Image 2025-08-26 at 10.51.26 PM.jpeg" alt="EmpowerNet Logo" />
+      <h3>Empowering The Nation</h3>
+    </div>
+    <nav>
+      <a href="Index.html">Home</a>
+      <a href="Courses.html">Courses</a>
+      <a href="Calculate your total fees.html">Calculate Fees</a>
+      <a href="Contact Us.html">Contact Us</a>
+    </nav>
+  </header> 
+
+  <div class="center-wrapper" style="display: flex; justify-content: center; align-items: center; min-height: 80vh; padding: 2rem;">
+    <div class="calculator-container fade-in">
+      <h1>Calculate Your Total Fees</h1>
+      <p>Select your desired courses and get instant pricing with automatic discounts</p>
+
+      <label>Course 1 (Required)</label>
+      <select id="course1">
+        <option value="0">Choose course...</option>
+        <option value="1500">First Aid</option>
+        <option value="1500">Sewing</option>
+        <option value="1500">Landscaping</option>
+        <option value="1500">Life Skills</option>
+      </select>
+
+      <label>Course 2 (Optional)</label>
+      <select id="course2">
+        <option value="0">Choose course...</option>
+        <option value="750">Child Minding</option>
+        <option value="750">Cooking</option>
+        <option value="750">Garden Maintenance</option>
+      </select>
+
+      <label>Course 3 (Optional)</label>
+      <select id="course3">
+        <option value="0">Choose course...</option>
+        <option value="1500">First Aid</option>
+        <option value="1500">Sewing</option>
+        <option value="1500">Landscaping</option>
+        <option value="1500">Life Skills</option>
+      </select>
+
+      <label>Course 4 (Optional)</label>
+      <select id="course4">
+        <option value="0">Choose course...</option>
+        <option value="750">Child Minding</option>
+        <option value="750">Cooking</option>
+        <option value="750">Garden Maintenance</option>
+      </select>
+
+      <h3>Total: <span id="total">R0.00</span></h3>
+      <p id="discount"></p>
+      <button id="paymentButton" style="display: none; background-color: #368ba7; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Proceed to Payment</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-cta">
+      <h2>Upskill with Empowering The Nation Today</h2>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h3>Empowering The Nation</h3>
+        <div class="socials">   
+          <a href="https://www.facebook.com/share/1JwCPpWnNp/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/sibu-celso-6b643138a" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/empowerweb_?igsh=MXY1MW5zZTRmbTRjNw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="#">Short Courses</a></li>
+            <li><a href="#">Six Month Courses</a></li>
+            <li><a href="#">Online Courses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Trainers</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Enrollment Info</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; powered by EmpowerWeb 2025. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="Calculater.js"></script>
+</body>
+</html>

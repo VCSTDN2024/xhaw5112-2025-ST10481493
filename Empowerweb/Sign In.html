@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - EmpowerWeb</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="Media/WhatsApp Image 2025-08-26 at 10.51.26 PM.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-color: #1b4965;
+      --accent-color: #00a896;
+      --light-bg: #f5f7fa;
+      --text-dark: #333;
+      --text-light: #fff;
+      --success-color: #10b981;
+      --error-color: #ef4444;
+      --border-color: #e5e7eb;
+      --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-large: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      line-height: 1.6;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow-large);
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 0.75rem;
+      box-shadow: var(--shadow-medium);
+      object-fit: cover;
+    }
+
+    .logo h3 {
+      color: var(--primary-color);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: -0.025em;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      font-size: 1.875rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .social-login {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      background: white;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-btn:hover {
+      background: #f9fafb;
+      border-color: var(--accent-color);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .social-btn i {
+      font-size: 1.125rem;
+    }
+
+    .social-btn.google:hover {
+      border-color: #db4437;
+    }
+
+    .social-btn.facebook:hover {
+      border-color: #4267B2;
+    }
+
+    .social-btn.linkedin:hover {
+      border-color: #0077b5;
+    }
+
+    .social-btn.guest {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+    }
+
+    .social-btn.guest:hover {
+      background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+    }
+
+    .social-btn.google i {
+      color: #db4437;
+    }
+
+    .social-btn.facebook i {
+      color: #4267B2;
+    }
+
+    .social-btn.linkedin i {
+      color: #0077b5;
+    }
+
+    .social-btn.guest i {
+      color: #6b7280;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 2rem 0;
+      position: relative;
+      color: #6b7280;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    }
+
+    .divider span {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 0 1rem;
+      position: relative;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group i.fa-envelope,
+    .input-group i.fa-phone,
+    .input-group i.fa-lock {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      color: #9ca3af;
+      font-size: 1rem;
+      z-index: 2;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 1rem 1rem 1rem 2.75rem;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      font-size: 1rem;
+      background: white;
+      transition: all 0.2s ease;
+      margin-bottom: 0;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.1);
+    }
+
+    .input-group input::placeholder {
+      color: #9ca3af;
+    }
+
+    .validation-icon {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: 1.125rem;
+      display: none;
+      z-index: 2;
+    }
+
+    .validation-icon.success {
+      color: var(--success-color);
+      display: block;
+    }
+
+    .validation-icon.error {
+      color: var(--error-color);
+      display: block;
+    }
+
+    .input-group.success input {
+      border-color: var(--success-color);
+      background-color: #f0fdf4;
+    }
+
+    .input-group.success i.fa-envelope,
+    .input-group.success i.fa-phone,
+    .input-group.success i.fa-lock {
+      color: var(--success-color);
+    }
+
+    .input-group.error input {
+      border-color: var(--error-color);
+      background-color: #fef2f2;
+    }
+
+    .input-group.error i.fa-envelope,
+    .input-group.error i.fa-phone,
+    .input-group.error i.fa-lock {
+      color: var(--error-color);
+    }
+
+    .validation-text {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+      line-height: 1.4;
+      padding-left: 0.25rem;
+    }
+
+    .error-message {
+      font-size: 0.75rem;
+      color: var(--error-color);
+      margin-top: 0.5rem;
+      display: none;
+      padding-left: 0.25rem;
+      font-weight: 500;
+    }
+
+    #submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+      color: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 1rem;
+      box-shadow: var(--shadow-medium);
+    }
+
+    #submit-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-large);
+    }
+
+    #submit-btn:active {
+      transform: translateY(0);
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: var(--success-color);
+      font-weight: 600;
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background: #f0fdf4;
+      border-radius: 8px;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 2rem 1.5rem;
+        margin: 0.5rem;
+      }
+
+      .social-login {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .social-btn.guest {
+        grid-column: 1;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-container {
+      animation: fadeInUp 0.6s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <div class="logo">
+      <img src="Media/WhatsApp Image 2025-08-26 at 10.51.26 PM.jpeg" alt="EmpowerWeb Logo">
+      <h3>Empowering The Nation</h3>
+    </div>
+
+    <h2>Sign In</h2>
+
+    <!-- Social Login Options -->
+    <div class="social-login">
+      <a href="#" class="social-btn google" onclick="socialLogin('google')">
+        <i class="fab fa-google"></i>
+        Google
+      </a>
+      <a href="#" class="social-btn facebook" onclick="socialLogin('facebook')">
+        <i class="fab fa-facebook-f"></i>
+        Facebook
+      </a>
+      <a href="#" class="social-btn linkedin" onclick="socialLogin('linkedin')">
+        <i class="fab fa-linkedin-in"></i>
+        LinkedIn
+      </a>
+      <a href="#" class="social-btn guest guest-login" onclick="guestLogin()">
+        <i class="fas fa-user"></i>
+        Continue as Guest
+      </a>
+    </div>
+
+    <div class="divider">
+      <span>or sign in with</span>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="input-group" id="email-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <i class="validation-icon fas fa-check-circle success"></i>
+        <i class="validation-icon fas fa-times-circle error"></i>
+        <div class="validation-text">Enter a valid email address (e.g., user@example.com)</div>
+        <div class="error-message" id="email-error"></div>
+      </div>
+
+      <div class="input-group" id="phone-group">
+        <i class="fas fa-phone"></i>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        <i class="validation-icon fas fa-check-circle success"></i>
+        <i class="validation-icon fas fa-times-circle error"></i>
+        <div class="validation-text">Enter a valid SA phone number (10 digits starting with 0, e.g., 0123456789)</div>
+        <div class="error-message" id="phone-error"></div>
+      </div>
+
+      <div class="input-group" id="password-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <i class="validation-icon fas fa-check-circle success"></i>
+        <i class="validation-icon fas fa-times-circle error"></i>
+        <div class="validation-text">Password must be at least 8 characters with uppercase, lowercase, number, and
+          special character</div>
+        <div class="error-message" id="password-error"></div>
+      </div>
+
+      <button type="submit" id="submit-btn">Sign In</button>
+
+      <p class="success-message" id="successMsg">Login successful! Redirecting...</p>
+    </form>
+  </div>
+
+  <script>
+    // Validation functions
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    function validatePhone(phone) {
+      // SA phone number: exactly 10 digits starting with 0
+      const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
+      const phoneRegex = /^0\d{9}$/;
+      return phoneRegex.test(cleanPhone);
+    }
+
+    function validatePassword(password) {
+      const minLength = password.length >= 8;
+      const hasUppercase = /[A-Z]/.test(password);
+      const hasLowercase = /[a-z]/.test(password);
+      const hasNumber = /\d/.test(password);
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+      return {
+        isValid: minLength && hasUppercase && hasLowercase && hasNumber && hasSpecialChar,
+        minLength,
+        hasUppercase,
+        hasLowercase,
+        hasNumber,
+        hasSpecialChar
+      };
+    }
+
+    function showValidation(fieldId, isValid, errorMessage = '') {
+      const group = document.getElementById(fieldId + '-group');
+      const errorDiv = document.getElementById(fieldId + '-error');
+      const successIcon = group.querySelector('.validation-icon.success');
+      const errorIcon = group.querySelector('.validation-icon.error');
+
+      // Reset classes
+      group.classList.remove('success', 'error');
+
+      // Hide all validation icons
+      successIcon.style.display = 'none';
+      errorIcon.style.display = 'none';
+      errorDiv.style.display = 'none';
+
+      if (isValid) {
+        group.classList.add('success');
+        successIcon.style.display = 'block';
+      } else if (errorMessage) {
+        group.classList.add('error');
+        errorIcon.style.display = 'block';
+        errorDiv.textContent = errorMessage;
+        errorDiv.style.display = 'block';
+      }
+    }
+
+    // Real-time validation
+    document.getElementById('email').addEventListener('input', function () {
+      const email = this.value.trim();
+      if (email === '') {
+        showValidation('email', null);
+      } else if (validateEmail(email)) {
+        showValidation('email', true);
+      } else {
+        showValidation('email', false, 'Please enter a valid email address');
+      }
+    });
+
+    document.getElementById('phone').addEventListener('input', function () {
+      const phone = this.value.trim();
+      if (phone === '') {
+        showValidation('phone', null);
+      } else if (validatePhone(phone)) {
+        showValidation('phone', true);
+      } else {
+        showValidation('phone', false, 'Please enter a valid SA phone number (10 digits starting with 0)');
+      }
+    });
+
+    document.getElementById('password').addEventListener('input', function () {
+      const password = this.value;
+      if (password === '') {
+        showValidation('password', null);
+      } else {
+        const validation = validatePassword(password);
+        if (validation.isValid) {
+          showValidation('password', true);
+        } else {
+          let errorMsg = 'Password must contain: ';
+          const missing = [];
+          if (!validation.minLength) missing.push('8+ characters');
+          if (!validation.hasUppercase) missing.push('uppercase letter');
+          if (!validation.hasLowercase) missing.push('lowercase letter');
+          if (!validation.hasNumber) missing.push('number');
+          if (!validation.hasSpecialChar) missing.push('special character');
+          errorMsg += missing.join(', ');
+          showValidation('password', false, errorMsg);
+        }
+      }
+    });
+
+    // Handle social login
+    function socialLogin(provider) {
+      const successMsg = document.getElementById('successMsg');
+      successMsg.textContent = `Signing in with ${provider.charAt(0).toUpperCase() + provider.slice(1)}...`;
+      successMsg.style.display = 'block';
+
+      // Simulate social login and redirect
+      setTimeout(() => {
+        window.location.href = 'Courses.html';
+      }, 2000);
+    }
+
+    // Handle guest login
+    function guestLogin() {
+      const successMsg = document.getElementById('successMsg');
+      successMsg.textContent = 'Continuing as guest...';
+      successMsg.style.display = 'block';
+
+      // Redirect to courses as guest
+      setTimeout(() => {
+        window.location.href = 'Courses.html';
+      }, 1500);
+    }
+
+    // Handle form submission
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const password = document.getElementById('password').value;
+      const successMsg = document.getElementById('successMsg');
+
+      // Validate all fields
+      const emailValid = validateEmail(email);
+      const phoneValid = validatePhone(phone);
+      const passwordValid = validatePassword(password).isValid;
+
+      // Show validation for empty or invalid fields
+      if (!email) {
+        showValidation('email', false, 'Email is required');
+      } else if (!emailValid) {
+        showValidation('email', false, 'Please enter a valid email address');
+      }
+
+      if (!phone) {
+        showValidation('phone', false, 'Phone number is required');
+      } else if (!phoneValid) {
+        showValidation('phone', false, 'Please enter a valid SA phone number (10 digits starting with 0)');
+      }
+
+      if (!password) {
+        showValidation('password', false, 'Password is required');
+      } else if (!passwordValid) {
+        const validation = validatePassword(password);
+        let errorMsg = 'Password must contain: ';
+        const missing = [];
+        if (!validation.minLength) missing.push('8+ characters');
+        if (!validation.hasUppercase) missing.push('uppercase letter');
+        if (!validation.hasLowercase) missing.push('lowercase letter');
+        if (!validation.hasNumber) missing.push('number');
+        if (!validation.hasSpecialChar) missing.push('special character');
+        errorMsg += missing.join(', ');
+        showValidation('password', false, errorMsg);
+      }
+
+      // If all validations pass, proceed with login
+      if (emailValid && phoneValid && passwordValid) {
+        successMsg.textContent = 'Login successful! Redirecting...';
+        successMsg.style.display = 'block';
+
+        // Simulate successful login and redirect after 2 seconds
+        setTimeout(() => {
+          window.location.href = 'Courses.html';
+        }, 2000);
+      }
+    });
+  </script>
+</body>
+
+</html>
